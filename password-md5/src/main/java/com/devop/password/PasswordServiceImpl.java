@@ -6,12 +6,12 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-@Service
+@Service("md5")
 public class PasswordServiceImpl implements PasswordService {
 
     @Override
     public String hash(String input) {
-        return m5(input);
+        return md5(input);
     }
 
     @Override
@@ -19,7 +19,7 @@ public class PasswordServiceImpl implements PasswordService {
         return "md5";
     }
 
-    private String m5(String input) {
+    private String md5(String input) {
         StringBuilder result = new StringBuilder();
         MessageDigest md;
 
