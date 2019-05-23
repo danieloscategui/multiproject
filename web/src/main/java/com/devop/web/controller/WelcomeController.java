@@ -15,13 +15,13 @@ public class WelcomeController {
     private final Logger logger = LoggerFactory.getLogger(WelcomeController.class);
 
     @Autowired
-    @Qualifier("md5")
+    @Qualifier("sha")
     PasswordService passwordService;
 
     @GetMapping("/")
     public String welcome(@RequestParam(name="query", required = false,
             defaultValue = "123456") String query, Model model){
-        logger.debug("Welcome to password service md5... Query: {}", query);
+        logger.debug("Query: {}", query);
         model.addAttribute("query", query);
         model.addAttribute("hash", passwordService.hash(query));
         model.addAttribute("algorithm", passwordService.algorithm());

@@ -19,13 +19,13 @@
     </properties>
 
     <dependencies>
-
+        <!--
         <dependency>
             <groupId>com.devop.password</groupId>
             <artifactId>password-md5</artifactId>
             <version>1.0</version>
         </dependency>
-
+        -->
         <dependency>
             <groupId>com.devop.password</groupId>
             <artifactId>password-sha</artifactId>
